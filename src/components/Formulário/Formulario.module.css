@@ -1,0 +1,15 @@
+.h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.containerForm {
+  display: flex;
+  flex-direction: column;
+}

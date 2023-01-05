@@ -4,12 +4,50 @@
   line-height: 28px;
   display: flex;
   align-items: center;
-
   color: #000000;
-  margin-bottom: 12px;
 }
 
 .containerForm {
   display: flex;
   flex-direction: column;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #100d0e;
+  margin: 12px 0 12px 15px;
+}
+
+.btn {
+  background: #000000;
+  border-radius: 25px;
+  width: 748px;
+  height: 52.44px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  margin-top: 42px;
+}
+.containerForm input {
+  border: 1px solid #100d0e;
+  border-radius: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #b9b7b7;
+  padding: 15px 20px;
+}
+.containerForm input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #b9b7b7;
 }

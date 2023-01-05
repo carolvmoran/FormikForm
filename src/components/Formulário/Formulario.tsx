@@ -25,11 +25,17 @@ const Formulario = () => {
         onSubmit={HandleSubmit}
       >
         <Form className={styles["containerForm"]}>
-          <label htmlFor="name">Nome</label>
+          <label className={styles["label"]} htmlFor="name">
+            Nome
+          </label>
           <Field id="name" name="name" placeholder="Seu nome completo"></Field>
-          <label htmlFor="date">Data de Nascimento</label>
+          <label className={styles["label"]} htmlFor="date">
+            Data de Nascimento
+          </label>
           <Field id="date" name="date" placeholder="00 00 0000"></Field>
-          <button type="submit">Cadastre-se</button>
+          <button className={styles["btn"]} type="submit">
+            Cadastre-se
+          </button>
         </Form>
       </Formik>
     </>

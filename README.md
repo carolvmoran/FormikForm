@@ -11,6 +11,11 @@ https://www.figma.com/file/vS3AjBAboqsK7BnNHSj3Lc/Pagina-Institucional-React.js?
 Para criar o projeto inicial foi feito o comando: npx create-react-app my-react-app --template typescript;
 Para instalar a biblioteca Fromik: yarn add formik
 
+# instalando Yup
+
+yarn add yup
+npm i @types/react-text-mask
+
 # Rodando projeto:
 
 o comando para rodar o projeto é: yarn start

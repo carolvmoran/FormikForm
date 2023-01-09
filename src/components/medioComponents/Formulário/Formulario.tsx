@@ -3,7 +3,7 @@ import styles from "./Formulario.module.css";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 import { schema } from "../../../utils/ValidationSchema";
 import MaskedInput from "react-text-mask";
-import { regex } from "../../../utils/regex";
+import { regex } from "../../../utils/Regex";
 import { Labels } from "../../miniComponents/Labels/Label";
 import { ErroParagrafo } from "../../miniComponents/ErroFormik/ErrorMessage";
 import { SecundaryTitle } from "../../miniComponents/SecundaryTitles/SecundaryTitle";

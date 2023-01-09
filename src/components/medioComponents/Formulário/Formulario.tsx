@@ -1,14 +1,16 @@
 import React from "react";
 import styles from "./Formulario.module.css";
-import { Formik, Field, Form, FormikHelpers, ErrorMessage } from "formik";
-import { schema } from "./ValidationSchema";
+import { Formik, Field, Form, FormikHelpers } from "formik";
+import { schema } from "../../../utils/ValidationSchema";
 import MaskedInput from "react-text-mask";
+import { regex } from "../../../utils/regex";
+import { Labels } from "../../miniComponents/Labels/Label";
+import { ErroParagrafo } from "../../miniComponents/ErroFormik/ErrorMessage";
 
 interface Values {
   name: string;
   date: string;
 }
-const dataMask = [/[1-9]/, /\d/, " ", /\d/, /\d/, " ", /\d/, /\d/, /\d/, /\d/];
 let listClients: Array<any> = [];
 const Formulario = () => {
   const HandleSubmit = (values: Values, actions: FormikHelpers<Values>) => {
@@ -29,12 +31,8 @@ const Formulario = () => {
       >
         <Form className={styles["containerForm"]}>
           <div>
-            <label className={styles["label"]} htmlFor="name">
-              Nome
-            </label>
-            <p className={styles["error"]}>
-              <ErrorMessage name="name"></ErrorMessage>
-            </p>
+            <Labels text="Nome" htmlFor="name" estilo={styles["label"]} />
+            <ErroParagrafo name="name" estilo={styles["error"]} />
             <Field
               id="name"
               name="name"
@@ -42,20 +40,19 @@ const Formulario = () => {
             ></Field>
           </div>
           <div>
-            <label className={styles["label"]} htmlFor="date">
-              Data de Nascimento
-            </label>
-            <p className={styles["error"]}>
-              <ErrorMessage name="date"></ErrorMessage>
-            </p>
+            <Labels
+              text="Data de Nascimento"
+              htmlFor="date"
+              estilo={styles["label"]}
+            />
+            <ErroParagrafo name="date" estilo={styles["error"]} />
             <Field
-              mask="00 00 0000"
               id="date"
               name="date"
               render={({ field }: any) => (
                 <MaskedInput
                   {...field}
-                  mask={dataMask}
+                  mask={regex.dataMask}
                   id="phone"
                   placeholder="00 00 0000"
                   type="text"
@@ -68,6 +65,7 @@ const Formulario = () => {
           </button>
         </Form>
       </Formik>
+      {/* <NamePage text="Seu formulario foi enviado" /> */}
     </>
   );
 };

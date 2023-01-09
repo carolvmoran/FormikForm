@@ -1,13 +1,13 @@
 import React from "react";
-import { Formulario } from "../components/Formulário/Formulario";
-import { BreadCrumb } from "../components/TitleAndBread/BreadCrumb";
-import { Titulo } from "../components/TitleAndBread/Title";
+import { Formulario } from "../components/medioComponents/Formulário/Formulario";
+import { BreadCrumb } from "../components/medioComponents/BreadCrumb/BreadCrumb";
+import { MainTitles } from "../components/miniComponents/MainTitles/MainTitle";
 
 const FaleConosco = () => {
   return (
     <main>
       <BreadCrumb />
-      <Titulo />
+      <MainTitles text="Institucional" estilo="h1" />
       <Formulario />
     </main>
   );

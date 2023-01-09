@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+import { regex } from "./regex";
 
 const schema = Yup.object().shape({
   name: Yup.string()
@@ -7,7 +8,7 @@ const schema = Yup.object().shape({
   date: Yup.string()
     .min(6, "Data deve ter, no mínimo, 6 numeros")
     .max(10, "Data deve ter, no maximo, 10 caracteres")
-    .matches(/^([0-9]{2}) [0-9]{2} [0-9]{4}$/, "Preencha dia, mês e ano")
+    .matches(regex.dataMaskValidation, "Preencha dia, mês e ano")
     .required("Campo obrigatório"),
 });
 

@@ -6,6 +6,8 @@ import MaskedInput from "react-text-mask";
 import { regex } from "../../../utils/regex";
 import { Labels } from "../../miniComponents/Labels/Label";
 import { ErroParagrafo } from "../../miniComponents/ErroFormik/ErrorMessage";
+import { SecundaryTitle } from "../../miniComponents/SecundaryTitles/SecundaryTitle";
+import { Button } from "../../miniComponents/Buttons/Button";
 
 interface Values {
   name: string;
@@ -20,7 +22,7 @@ const Formulario = () => {
   };
   return (
     <>
-      <h2 className={styles["h2"]}>Preencha o formulário </h2>
+      <SecundaryTitle estilo={styles["h2"]} text="Preencha o formulário" />
       <Formik
         initialValues={{
           name: "",
@@ -60,9 +62,7 @@ const Formulario = () => {
               )}
             ></Field>
           </div>
-          <button className={styles["btn"]} type="submit">
-            Cadastre-se
-          </button>
+          <Button type="submit" text="Cadastre-se" estilo={styles["btn"]} />
         </Form>
       </Formik>
       {/* <NamePage text="Seu formulario foi enviado" /> */}
